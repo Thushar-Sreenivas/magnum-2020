@@ -34,11 +34,11 @@ body{color: #fff;font-family: 'Poppins', sans-serif;}
 /* Global */
     @font-face {
         font-family: 'icomoon';
-        src: url('/assets/fonts/icomoonc50c.eot?8zcavq');
-        src: url('/assets/fonts/icomoonc50c.eot?8zcavq#iefix') format('embedded-opentype'),
-             url('/assets/fonts/icomoonc50c.ttf?8zcavq') format('truetype'),
-             url('/assets/fonts/icomoonc50c.woff?8zcavq') format('woff'),
-             url('/assets/fonts/icomoonc50c.svg?8zcavq#icomoon') format('svg');
+        src: url('/assets/fonts/icomoon.eot');
+        src: url('/assets/fonts/icomoon.eot') format('embedded-opentype'),
+             url('/assets/fonts/icomoon.ttf') format('truetype'),
+             url('/assets/fonts/icomoon.woff') format('woff'),
+             url('/assets/fonts/icomoon.svg#icomoon') format('svg');
         font-weight: normal;
         font-style: normal;
     }
@@ -1093,30 +1093,30 @@ body{color: #fff;font-family: 'Poppins', sans-serif;}
     .line-item-logo .cmiddle{display: table-cell;text-align: center;vertical-align: middle;}
     /*.line-item-logo.text{margin-left: -15px;margin-right: -15px;}*/
 
-/* Agenda */
+/* workshops */
     .banner-xlg .container{max-width: 1000px;}
-    #agenda{padding-bottom:100px;}
-    #agenda .tab-content{max-width: 820px;margin:0 auto;}
-    .agenda-item{border-top: 1px solid #f0582a;padding: 30px 0;position: relative;}
-    .agenda-item:last-child{border-bottom: 1px solid #f0582a}
-    .agenda-item.lg + .agenda-item{border-color:#fa2e70;}
-    .agenda-item.lg{border-color:#fa2e70;padding: 40px 0;}
-    .agenda-item .time{width: 200px;float: left;font-size: 20px;font-family: 'andale_mono';color: #f0582a;}
-    .agenda-item .desc{margin-left: 200px;padding-top: 4px;}
-    .agenda-item .desc.has-location{padding-right: 160px;}
-    .agenda-item .title{font-size: 22px;color: #f0582a;font-weight: 600;margin: 0 0 15px;}
-    .agenda-item .desc p{font-size:15px;font-family: 'andale_mono';line-height: 1.6;margin-bottom:20px;}
-    .agenda-item .desc p.fz18{font-size: 18px;margin-bottom: 0;padding-bottom:10px;padding-top:10px;}
-    .agenda-item .desc p a{color: #fa2e70;text-decoration: underline;}
-    .agenda-item .avatar-circle{display: inline-block;text-decoration: none; margin-bottom: 20px;}
-    .agenda-item .avatar-circle>img{border-radius: 50%;height: 55px;width: auto;margin-right: 10px;}
-    .agenda-item .avatar-circle span{font-size: 18px;font-family: 'andale_mono';text-decoration: underline;color: #f0582a;}
-    .agenda-item.lg .time{color: #fff;}
-    .agenda-item.lg .title{font-size: 35px;font-weight: 700;color: #fff;margin-bottom: 0;}
-    .agenda-item .title .location{font-size:15px;color: #fa2e70;font-weight: 500;text-transform: uppercase;margin-left: 15px;}
-    .agenda-item .title .location i{font-size: 22px;position: relative;top:3px;margin-right: 5px;}
-    .agenda-item .has-location .location{position: absolute;font-size: 14px;font-family: 'andale_mono';right: 0;top:50%;margin-top: -12px;}
-    .agenda-item .has-location .location i{font-size: 20px;color: #fa2e70;position: relative;top:3px;}
+    #workshops{padding-bottom:100px;}
+    #workshops .tab-content{max-width: 820px;margin:0 auto;}
+    .workshops-item{border-top: 1px solid #f0582a;padding: 30px 0;position: relative;}
+    .workshops-item:last-child{border-bottom: 1px solid #f0582a}
+    .workshops-item.lg + .workshops-item{border-color:#fa2e70;}
+    .workshops-item.lg{border-color:#fa2e70;padding: 40px 0;}
+    .workshops-item .time{width: 200px;float: left;font-size: 20px;font-family: 'andale_mono';color: #f0582a;}
+    .workshops-item .desc{margin-left: 200px;padding-top: 4px;}
+    .workshops-item .desc.has-location{padding-right: 160px;}
+    .workshops-item .title{font-size: 22px;color: #f0582a;font-weight: 600;margin: 0 0 15px;}
+    .workshops-item .desc p{font-size:15px;font-family: 'andale_mono';line-height: 1.6;margin-bottom:20px;}
+    .workshops-item .desc p.fz18{font-size: 18px;margin-bottom: 0;padding-bottom:10px;padding-top:10px;}
+    .workshops-item .desc p a{color: #fa2e70;text-decoration: underline;}
+    .workshops-item .avatar-circle{display: inline-block;text-decoration: none; margin-bottom: 20px;}
+    .workshops-item .avatar-circle>img{border-radius: 50%;height: 55px;width: auto;margin-right: 10px;}
+    .workshops-item .avatar-circle span{font-size: 18px;font-family: 'andale_mono';text-decoration: underline;color: #f0582a;}
+    .workshops-item.lg .time{color: #fff;}
+    .workshops-item.lg .title{font-size: 35px;font-weight: 700;color: #fff;margin-bottom: 0;}
+    .workshops-item .title .location{font-size:15px;color: #fa2e70;font-weight: 500;text-transform: uppercase;margin-left: 15px;}
+    .workshops-item .title .location i{font-size: 22px;position: relative;top:3px;margin-right: 5px;}
+    .workshops-item .has-location .location{position: absolute;font-size: 14px;font-family: 'andale_mono';right: 0;top:50%;margin-top: -12px;}
+    .workshops-item .has-location .location i{font-size: 20px;color: #fa2e70;position: relative;top:3px;}
 
 /* About */
     #about-opening{padding: 80px 0 40px;}
@@ -1170,7 +1170,7 @@ text-align: center;color: #fff!important;font-size: 16px;font-family: 'andale_mo
 .sponsors .list-sponsors{text-align: center;margin:0 -20px;}
 .sponsors .list-sponsors>li{display:inline-block;margin:0 20px;}
 
-.agenda-item .avatar-circle span.speaker-comparetxt{font-size: 18px;font-weight: 600;color:#fff;font-family: 'Poppins', sans-serif;
+.workshops-item .avatar-circle span.speaker-comparetxt{font-size: 18px;font-weight: 600;color:#fff;font-family: 'Poppins', sans-serif;
     text-decoration:none;}
 .avatar-circle.mb20{margin-bottom: 20px;}
 
@@ -1493,21 +1493,21 @@ text-align: center;color: #fff!important;font-size: 16px;font-family: 'andale_mo
     .line-item-logo{font-size: 14px;}
     .line-item-logo.text{height: auto;margin-left: -5px;margin-right: -5px;}
 
-    .agenda-item .time{width: auto;float: none;margin-bottom: 10px;font-size: 18px;}
-    .agenda-item .desc{margin-left: 0;padding-top: 0;}
-    .agenda-item, .agenda-item.lg{padding: 20px 0 25px;}
-    .agenda-item .title{font-size: 20px;margin-bottom: 10px;}
-    .agenda-item.lg .title{font-size: 22px;}
-    .agenda-item .desc p{font-size: 13px;line-height: 1.4;}
-    .agenda-item .desc p.fz18{font-size: 14px;padding-bottom:6px;padding-top:6px;}
-    .agenda-item .avatar-circle > img{height: 50px;}
-    .agenda-item .avatar-circle span{font-size: 15px;}
-    .agenda-item .desc.has-location{padding-right: 0;}
-    .agenda-item .has-location .location{top:20px;margin-top: 0;}
-    .agenda-item .title .location{font-size: 13px;margin-left: 0;}
-    .agenda-item .time .location{font-size:13px;color: #fa2e70;font-weight: 500;text-transform: uppercase;}
-    .agenda-item .time .location.visible-xs{display: inline-block!important;}
-    .agenda-item .time .location i{font-size: 18px;position: relative;top:3px;}
+    .workshops-item .time{width: auto;float: none;margin-bottom: 10px;font-size: 18px;}
+    .workshops-item .desc{margin-left: 0;padding-top: 0;}
+    .workshops-item, .workshops-item.lg{padding: 20px 0 25px;}
+    .workshops-item .title{font-size: 20px;margin-bottom: 10px;}
+    .workshops-item.lg .title{font-size: 22px;}
+    .workshops-item .desc p{font-size: 13px;line-height: 1.4;}
+    .workshops-item .desc p.fz18{font-size: 14px;padding-bottom:6px;padding-top:6px;}
+    .workshops-item .avatar-circle > img{height: 50px;}
+    .workshops-item .avatar-circle span{font-size: 15px;}
+    .workshops-item .desc.has-location{padding-right: 0;}
+    .workshops-item .has-location .location{top:20px;margin-top: 0;}
+    .workshops-item .title .location{font-size: 13px;margin-left: 0;}
+    .workshops-item .time .location{font-size:13px;color: #fa2e70;font-weight: 500;text-transform: uppercase;}
+    .workshops-item .time .location.visible-xs{display: inline-block!important;}
+    .workshops-item .time .location i{font-size: 18px;position: relative;top:3px;}
 
     #about-opening{padding: 70px 0 20px;}
     #about{font-size: 14px;line-height: 1.5;padding-bottom: 30px;}
@@ -1530,11 +1530,11 @@ text-align: center;color: #fff!important;font-size: 16px;font-family: 'andale_mo
     
     .event-location{margin-top:20px;font-size: 20px;}
     .event-date{font-size: 19px;}
-    .sponsors h3{margin:20px 0;text-align: left;}
+    .sponsors h3{margin:20px 0;/*! text-align: center; */}
     .sponsors .list-sponsors{margin:0 -20px;max-width:none;}
     .sponsors .list-sponsors > li{margin:0 15px 30px;}
     .sponsors .list-sponsors > li img{height: 40px;}
-    .agenda-item .avatar-circle span.speaker-comparetxt{font-size: 15px;}
+    .workshops-item .avatar-circle span.speaker-comparetxt{font-size: 15px;}
     
     .get-tickets-text .title-38{margin-bottom: 20px;}
     .event-location{margin-top: 15px;}
