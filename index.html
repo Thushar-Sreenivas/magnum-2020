@@ -1,37 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-                <meta charset="utf-8">
+        <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
         <meta name="description" content="">
         <meta name="keywords" content="" />
         <meta name="author" content="404">
-        <link rel="shortcut icon" href="../assets/img/favicon.png">
-        <!-- <base href="https://www.404.ie/"> -->
+        <link rel="shortcut icon" href="assets/img/favicon.png">
         <title>MAGNUM 2020</title>
         <link href="assets/css/bootstrap.min.css" rel="stylesheet">
         <link href="assets/css/slick.css" rel="stylesheet">
         <link href="assets/css/animate.css" rel="stylesheet">
         <link href="assets/css/jquery.fullpage.min.css" rel="stylesheet">
-        <link href="assets/css/style.css" rel="stylesheet">
-        <!-- Google Tag Manager -->
-        <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-PDQWW52');</script>
-        <!-- End Google Tag Manager -->
-        <link href="//fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet"> 
-        <!--[if lt IE 9]>
-            <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-            <script src="//oss.maxcdn.com/libs/respond.assets/js/1.4.2/respond.min.js"></script>
-        <![endif]-->
-        <!-- <meta property="og:description" content="Take your career in tech to the next level in Ireland." />
-        <meta property="og:title" content="404" />
-        <meta property="og:url" content="" />
-        <meta property="og:site_name" content="404" /> -->
-    <!-- This site is optimized with the Sterc seoPro plugin - https://github.com/Sterc/SEOPro.-->
-</head>
+        <link href="assets/css/style.css" rel="stylesheet">        
+        <link href="//fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">         
+    </head>
+
     <body class="homepage">
 
-                <div class="navbar navbar-fixed-top navbar-nologo">
+        <div class="navbar navbar-fixed-top navbar-nologo">
             <div class="container-fluid">
                 <div class="navbar-header">
                     <button class="hamburger hidden-first" type="button" data-toggle="navigation">
@@ -51,12 +39,6 @@
             <img src="/assets/img/logo_blue.png" alt="" class="logo-blue">
         </a>
 
-        
-
-               <!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PDQWW52"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
 <div class="menu-backdrop"></div>
         <div id="menu">
             <button class="hamburger" type="button" data-toggle="navigation">
@@ -519,26 +501,67 @@ You can email us now at <a href="mailto:hello@404.ie" style="color:#fa2e70">hell
                             });
                         }
 
-                        $('.background-video').remove()
+                        
                         $('.hidden-first').fadeIn()
                         $('.cookie-policy').removeClass('hidden-first')
 
                     } else {
 
-                        if($(window).width()<=1024){
-                            $('.background-video').remove()
+                        if($(window).width()<=1024){                            
                             $('.hidden-first').fadeIn()
                             $('.cookie-policy').removeClass('hidden-first')
+                            var req = new XMLHttpRequest();
+                                req.open('GET', 'assets/video/video.mp4', true);
+                                req.responseType = 'blob';
 
-                            initPage()
+                                var video = document.getElementById("opening-video");
+                                req.onload = function() {
+                                   // Onload is triggered even on 404
+                                   // so we need to check the status code
+                                   if (this.status === 200) {
+                                        var videoBlob = this.response;
+                                        var vid = URL.createObjectURL(videoBlob); // IE10+
+                                        // Video is now downloaded
+                                        // and we can set it as source on the video element
+                                        video.src = vid;
+                                        $('#opening-video')[0].play()
+                                        initPage()
+                                   }
+                                }
+                                req.onerror = function() {
+                                    initPage()
+                                }
+                                req.send();
+                            
                         } else {
 
                             if(getParameterByName('ref')=='menu'){
                                 $('.homepage-video').remove()
                                 $('.hidden-first').fadeIn()
                                 $('.cookie-policy').removeClass('hidden-first')
+                                var req = new XMLHttpRequest();
+                                req.open('GET', 'assets/video/video.mp4', true);
+                                req.responseType = 'blob';
 
-                                initPage()
+                                var video = document.getElementById("opening-video");
+                                req.onload = function() {
+                                   // Onload is triggered even on 404
+                                   // so we need to check the status code
+                                   if (this.status === 200) {
+                                        var videoBlob = this.response;
+                                        var vid = URL.createObjectURL(videoBlob); // IE10+
+                                        // Video is now downloaded
+                                        // and we can set it as source on the video element
+                                        video.src = vid;
+                                        $('#opening-video')[0].play()
+                                        initPage()
+                                   }
+                                }
+                                req.onerror = function() {
+                                    initPage()
+                                }
+                                req.send();
+                                
                             } else {
                                 var req = new XMLHttpRequest();
                                 req.open('GET', 'assets/video/video.mp4', true);
