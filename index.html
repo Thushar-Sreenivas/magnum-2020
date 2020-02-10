@@ -419,28 +419,29 @@
                         if($(window).width()<=1024){                            
                             $('.hidden-first').fadeIn()
                             $('.cookie-policy').removeClass('hidden-first')
-                            var req = new XMLHttpRequest();
-                                req.open('GET', 'assets/video/video.mp4', true);
-                                req.responseType = 'blob';
+                            // var req = new XMLHttpRequest();
+                            //     req.open('GET', 'assets/video/video.mp4', true);
+                            //     req.responseType = 'blob';
 
-                                var video = document.getElementById("opening-video");
-                                req.onload = function() {
-                                   // Onload is triggered even on 404
-                                   // so we need to check the status code
-                                   if (this.status === 200) {
-                                        var videoBlob = this.response;
-                                        var vid = URL.createObjectURL(videoBlob); // IE10+
-                                        // Video is now downloaded
-                                        // and we can set it as source on the video element
-                                        video.src = vid;
-                                        $('#opening-video')[0].play()
-                                        initPage()
-                                   }
-                                }
-                                req.onerror = function() {
-                                    initPage()
-                                }
-                                req.send();
+                            //     var video = document.getElementById("opening-video");
+                            //     req.onload = function() {
+                            //        // Onload is triggered even on 404
+                            //        // so we need to check the status code
+                            //        if (this.status === 200) {
+                            //             var videoBlob = this.response;
+                            //             var vid = URL.createObjectURL(videoBlob); // IE10+
+                            //             // Video is now downloaded
+                            //             // and we can set it as source on the video element
+                            //             video.src = vid;
+                            //             $('#opening-video')[0].play()
+                            //             initPage()
+                            //        }
+                            //     }
+                            //     req.onerror = function() {
+                            //         initPage()
+                            //     }
+                            //     req.send();
+                            initPage();
                             
                         } else {
 
@@ -448,52 +449,54 @@
                                 $('.homepage-video').remove()
                                 $('.hidden-first').fadeIn()
                                 $('.cookie-policy').removeClass('hidden-first')
-                                var req = new XMLHttpRequest();
-                                req.open('GET', 'assets/video/video.mp4', true);
-                                req.responseType = 'blob';
+                                // var req = new XMLHttpRequest();
+                                // req.open('GET', 'assets/video/video.mp4', true);
+                                // req.responseType = 'blob';
 
-                                var video = document.getElementById("opening-video");
-                                req.onload = function() {
-                                   // Onload is triggered even on 404
-                                   // so we need to check the status code
-                                   if (this.status === 200) {
-                                        var videoBlob = this.response;
-                                        var vid = URL.createObjectURL(videoBlob); // IE10+
-                                        // Video is now downloaded
-                                        // and we can set it as source on the video element
-                                        video.src = vid;
-                                        $('#opening-video')[0].play()
-                                        initPage()
-                                   }
-                                }
-                                req.onerror = function() {
-                                    initPage()
-                                }
-                                req.send();
+                                // var video = document.getElementById("opening-video");
+                                // req.onload = function() {
+                                //    // Onload is triggered even on 404
+                                //    // so we need to check the status code
+                                //    if (this.status === 200) {
+                                //         var videoBlob = this.response;
+                                //         var vid = URL.createObjectURL(videoBlob); // IE10+
+                                //         // Video is now downloaded
+                                //         // and we can set it as source on the video element
+                                //         video.src = vid;
+                                //         $('#opening-video')[0].play()
+                                //         initPage()
+                                //    }
+                                // }
+                                // req.onerror = function() {
+                                //     initPage()
+                                // }
+                                // req.send();
+                                initPage();
                                 
                             } else {
-                                var req = new XMLHttpRequest();
-                                req.open('GET', 'assets/video/video.mp4', true);
-                                req.responseType = 'blob';
+                                // var req = new XMLHttpRequest();
+                                // req.open('GET', 'assets/video/video.mp4', true);
+                                // req.responseType = 'blob';
 
-                                var video = document.getElementById("opening-video");
-                                req.onload = function() {
-                                   // Onload is triggered even on 404
-                                   // so we need to check the status code
-                                   if (this.status === 200) {
-                                        var videoBlob = this.response;
-                                        var vid = URL.createObjectURL(videoBlob); // IE10+
-                                        // Video is now downloaded
-                                        // and we can set it as source on the video element
-                                        video.src = vid;
-                                        $('#opening-video')[0].play()
-                                        initPage()
-                                   }
-                                }
-                                req.onerror = function() {
-                                    initPage()
-                                }
-                                req.send();
+                                // var video = document.getElementById("opening-video");
+                                // req.onload = function() {
+                                //    // Onload is triggered even on 404
+                                //    // so we need to check the status code
+                                //    if (this.status === 200) {
+                                //         var videoBlob = this.response;
+                                //         var vid = URL.createObjectURL(videoBlob); // IE10+
+                                //         // Video is now downloaded
+                                //         // and we can set it as source on the video element
+                                //         video.src = vid;
+                                //         $('#opening-video')[0].play()
+                                //         initPage()
+                                //    }
+                                // }
+                                // req.onerror = function() {
+                                //     initPage()
+                                // }
+                                // req.send();
+                                initPage();
                             }
                         }
                     }
