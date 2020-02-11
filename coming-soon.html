@@ -6,18 +6,15 @@
         <meta name="description" content="">
         <meta name="keywords" content="" />
         <meta name="author" content="404">
-        <link rel="shortcut icon" href="../assets/img/favicon.png">
-        <!-- <base href="https://www.404.ie/"> -->
+        <link rel="shortcut icon" href="assets/img/favicon.png">
+        
         <title>MAGNUM 2020</title>
         <link href="assets/css/bootstrap.min.css" rel="stylesheet">
         <link href="assets/css/slick.css" rel="stylesheet">
         <link href="assets/css/animate.css" rel="stylesheet">
         <link href="assets/css/jquery.fullpage.min.css" rel="stylesheet">
         <link href="assets/css/style.css" rel="stylesheet">
-        <!-- Google Tag Manager -->
-        <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-PDQWW52');</script>
-        <!-- End Google Tag Manager -->
-        <link href="//fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet"> 
+        
         
     </head>
     <body>
@@ -43,10 +40,6 @@
 
         
 
-               <!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PDQWW52"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
 <div class="menu-backdrop"></div>
         <div id="menu">
             <button class="hamburger" type="button" data-toggle="navigation">
@@ -58,7 +51,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <div class="menu-nav">
                     <div class="left-middle">
                         <ul class="nav">
-                            <li class="first active"><a href="index.html"><span>Home</span></a></li><li><a href="coming-soon.html"><span>Events</span></a></li><li><a href="tech-teams/"><span>Tech teams</span></a></li><li><a href="coming-soon.html"><span>workshops</span></a></li><li class="last"><a href="venue.html"><span>Venue</span></a></li>
+                            <li class="first active"><a href="index.html"><span>Home</span></a></li><li><a href="coming-soon.html"><span>Events</span></a></li><li><a href="workshops.html"><span>workshops</span></a></li><li class="last"><a href="venue.html"><span>Venue</span></a></li>
                         </ul>
                     </div>
                 </div>
@@ -72,7 +65,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                 <div class="date">29 February - 1 March 2020</div>
                                 <div class="location">College of Engineering Chengannur</div>
                                 
-                                <a href="resgistration link" target="_blank" class="btn btn-info"><span>REGISTER</span></a>
+                                <!-- <a href="resgistration link" target="_blank" class="btn btn-info"><span>REGISTER</span></a> -->
                                 <!--<button type="button" class="btn btn-info btn-register-interest"><span>REGISTER</span></button>-->
                                 <!-- <div class="social">
                                     <a href="magnum facebook link" target="_blank"><i class="ic-facebook"></i></a>
@@ -113,139 +106,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <script src="assets/js/iscroll.js"></script>
         <script src="assets/js/validator.min.js"></script>
         <script src="assets/js/script.js"></script>
-        <script>
-            $(function(){
-                function getParameterByName(name, url) {
-                    if (!url) url = window.location.href;
-                    name = name.replace(/[\[\]]/g, "\\$&");
-                    var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
-                        results = regex.exec(url);
-                    if (!results) return null;
-                    if (!results[2]) return '';
-                    return decodeURIComponent(results[2].replace(/\+/g, " "));
-                }
-                $(window).resize(function(){
-                    if($(window).width()<768){
-                        if($('#fullpage').hasClass('fullpage-wrapper')) $.fn.fullpage.destroy('all');
-                        $('#get-tickets').height($(window).height())
-                        if(!$('#big-number-slick').hasClass('slick-slider')){
-                            $('#big-number-slick').slick({
-                                slidesToShow: 1,
-                                slidesToScroll: 1,
-                                arrows: false,
-                                dots: true,
-                                infinite: false,
-                                autoplay: false,
-                                autoplaySpeed: 5000
-                            });
-                        }
-
-                        $('.background-video').remove()
-                        $('.hidden-first').fadeIn()
-                        $('.cookie-policy').removeClass('hidden-first')
-
-                    } else {
-
-                        if($(window).width()<=1024){
-                            $('.background-video').remove()
-                            $('.hidden-first').fadeIn()
-                            $('.cookie-policy').removeClass('hidden-first')
-
-                            initPage()
-                        } else {
-
-                            if(getParameterByName('ref')=='menu'){
-                                $('.homepage-video').remove()
-                                $('.hidden-first').fadeIn()
-                                $('.cookie-policy').removeClass('hidden-first')
-
-                                initPage()
-                            } else {
-                                var req = new XMLHttpRequest();
-                                req.open('GET', 'assets/video/media.io_coming-soon.mp4', true);
-                                req.responseType = 'blob';
-
-                                var video = document.getElementById("opening-video");
-                                req.onload = function() {
-                                   // Onload is triggered even on 404
-                                   // so we need to check the status code
-                                   if (this.status === 200) {
-                                        var videoBlob = this.response;
-                                        var vid = URL.createObjectURL(videoBlob); // IE10+
-                                        // Video is now downloaded
-                                        // and we can set it as source on the video element
-                                        video.src = vid;
-                                        $('#opening-video')[0].play()
-                                        initPage()
-                                   }
-                                }
-                                req.onerror = function() {
-                                    initPage()
-                                }
-                                req.send();
-                            }
-                        }
-                    }
-                }).trigger('resize');
-
-                function initPage(){
-                    $('.page-loading').hide();
-                    if($('#big-number-slick').hasClass('slick-slider')) $('#big-number-slick').slick('unslick');
-
-                    if(!$('#fullpage').hasClass('fullpage-wrapper')){
-                        $('#fullpage').fullpage({
-                            fitToSection: false,
-                            onLeave: function(index, nextIndex, direction){
-                                if(nextIndex==1){
-                                    if($(window).width()>1024 && $('html').hasClass('touchevents')==false) $('#get-tickets .background-video')[0].play();
-                                /*} else if(nextIndex==2){
-                                    if($(window).width()>1024 && $('html').hasClass('touchevents')==false) $('#home-opening .background-video')[0].play();*/
-                                } else if(nextIndex==2){
-                                    if($(window).width()>1024 && $('html').hasClass('touchevents')==false) $('#big-number .background-video')[0].play();
-                                }
-                                /*if(nextIndex==4||nextIndex==5){
-                                    $('body').addClass('blue-menubar')
-                                } else {
-                                    $('body').removeClass('blue-menubar')
-                                }*/
-                            }
-                        });
-                    }
-
-                    if($(window).width()>1024 && getParameterByName('ref')!='menu'){
-                        setTimeout(function(){
-                            $('#get-tickets .background-video')[0].play(); 
-                            $('.homepage-video').hide()
-                            $('.hidden-first').fadeIn()
-                        },3500)
-                    }
-                }
-
-                $('.scroll-down-btn').click(function(e){
-                    e.preventDefault();
-                    if($(window).width()>767){
-                        $.fn.fullpage.moveTo(2);
-                    } else {
-                        var target = $(this).attr('href')
-                        $('html, body').stop().animate({
-                            'scrollTop': $(target).offset().top
-                        },500);
-                    }
-                })
-                
-                $('[data-toggle="modal-video"]').click(function(e) {
-                    e.preventDefault();
-
-                    var video = $(this).data("video");
-                    $('#modal-video').find('iframe').attr('src', video);
-                    $('#modal-video').modal('show')
-                });
-                $('#modal-video').on('hidden.bs.modal', function (e) {
-                    $('#modal-video').find('iframe').attr('src', '');
-                });
-                
-            });
-        </script>
+        
     </body>
 </html>
 
